@@ -1,4 +1,4 @@
-# 
+# Rule
 - 절대 main(또는 master)에서 바로 작업하지 않고, issue번호 별로 branch를 생성해서 그 branch에서 작업한다
 - merge는 주기적으로 자주 
 - commit은 생활화하자 (issue에서 각 항목별로 구현 완료할때마다 체크해주고 commit해주자)
