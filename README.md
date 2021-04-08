@@ -1,4 +1,6 @@
-# Rule
+## MyHomeFit - Web
+
+## Rule
 - 코딩을 바로 시작하지 않고, issue를 생성하여 해야할 일을 정리하고 issue번호로 브랜치를 생성한 후(branch명: feat/이슈 번호) 시작한다.
 - 절대 main(또는 master)에서 바로 작업하지 않고, issue번호 별로 branch를 생성해서 그 branch에서 작업한다
 - merge는 주기적으로 자주 
@@ -6,7 +8,7 @@
 - commit할때는 commit messege convention을 최대한 지켜주자
 
 
-# commit messege convention
+## commit messege convention
 - feat(FileName) : 작업내용 
                   -> 한 단위 완성 (issue에서 항목 별로 commit 권장)
 - fix(FileName) : 작업내용 
