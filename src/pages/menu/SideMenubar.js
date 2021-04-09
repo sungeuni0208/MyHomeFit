@@ -35,7 +35,7 @@ const SideMenubar = () => {
                                 {menu === 1 ? <img src={AddClicked}/> : <img src={Add}/>}
                             </Link>
                             <div>
-                                <label>Meke Your Set</label>
+                                <label>Make Your Set</label>
                                 {menu===1? <img src={RightClicked}/>:<img src={Right}/>}
                             </div>
                         </li>
