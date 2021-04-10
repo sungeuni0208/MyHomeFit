@@ -71,9 +71,10 @@
 }
 .url-input{
     width: 700px;
-    height: 40px;
+    height: 45px;
     margin-left: 20px;
     font-size:20px;
+    border: none;
 }
 .url-button{
     background-color: #7cebd8;
@@ -99,7 +100,7 @@
     display: block;
     width: 100%;
 }
-.box{
+.block{
     height: 80px;
     width: 300px;
     background-color: #27cfb3;
@@ -112,6 +113,10 @@
 .block-box{
     margin-top: 50px;
 }
-.box:hover{
+.block:hover{
     opacity:1;
+}
+.send-icon{
+    padding-top:25px;
+    padding-left:250px;
 }

@@ -1,7 +1,8 @@
 import React from 'react';
 import '../css/MakeYourSet/MakeYourSet.css';
 import IconSet from '../images/icon_makeyourset.png';
-import Icon from '../images/url_send.png';
+import SendIcon from '../images/url_send.png';
+import RightIcon from '../images/menu_right_clicked.png';
 
 const MakeYourSet = () => {
     return (
@@ -24,7 +25,7 @@ const MakeYourSet = () => {
                         <div className="url-container">
                             <label>URL</label>
                             <input className="url-input"></input>
-                            <img src={Icon} className="url-button"
+                            <img src={SendIcon} className="url-button"
                             onClick={(e)=>{
                             }}></img>
                         </div>
@@ -33,12 +34,12 @@ const MakeYourSet = () => {
                     <label>Make Your Fitness Set.</label>
             </div>
             <div className="block-box">
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
-                <div className="box"></div>
+                <div className="block"><img src={RightIcon} className="send-icon"></img></div>
+                <div className="block"><img src={RightIcon} className="send-icon"></img></div>
+                <div className="block"><img src={RightIcon} className="send-icon"></img></div>
+                <div className="block"><img src={RightIcon} className="send-icon"></img></div>
+                <div className="block"><img src={RightIcon} className="send-icon"></img></div>
+                <div className="block"><img src={RightIcon} className="send-icon"></img></div>
             </div>
         </div>
     );
