@@ -101,22 +101,55 @@
     width: 100%;
 }
 .block{
+    position: relative;
     height: 80px;
     width: 300px;
     background-color: #27cfb3;
     border-radius: 100px;
     opacity: 0.5;
-    display: block;
-    margin-left: 100px;
     margin-bottom:2px;
+
 }
 .block-box{
     margin-top: 50px;
+    margin-left: 100px;
 }
 .block:hover{
-    opacity:1;
+    opacity:1 !important; 
 }
 .send-icon{
     padding-top:25px;
     padding-left:250px;
+}
+.arrow_box {
+	position: absolute;
+    right: 350px;
+    top: 0px;
+	background: #d3d2d2;
+    height: 200px;
+	width: 200px;
+    border-radius: 20px;
+}
+
+.preview-img{
+    padding-left: 10px;
+    padding-top: 10px;
+    position: absolute;
+}
+.time-box{
+    width: 340px;
+    height: 120px;
+    padding:10px 43px 40px 51px;
+    object-fit: contain;
+    opacity: 0.51;
+    border-radius: 50px;
+    position:fixed;
+    right: 50px;
+    bottom:50px;
+    background-color: #a3daf9;
+    font-size: 30px;
+    line-height: 1em;
+    text-align: center;
+    color: #565454 im !important;
+    font-weight: bolder;
 }
