@@ -68,8 +68,9 @@ const MakeYourSet = () => {
                
     
             </div>
-                <ul className="exercise-list">
-                    <div></div>
+            <div className="list-wrapper">
+                <div className="btn-left"><text>&lt;</text></div>
+                <ul className="exercise-list">    
                     <li>
                         
                         <div className="list-img"><img src={StretchImg}></img></div>
@@ -77,31 +78,25 @@ const MakeYourSet = () => {
                         
                     </li>
                     <li>
-                        <div className="list-content">
                         <div className="list-img"><img src={SquatImg}></img></div>
                         <div className="list-text"><text>10회 반복</text></div>
-                        </div>
                     </li>
                     <li>
-                        <div className="list-content">
                         <div className="list-img"><img src={PreviewImg}></img></div>
                         <div className="list-text"><text>10회 반복</text></div>
-                        </div>
+
                     </li>
                     <li>
-                        <div className="list-content">
                         <div className="list-img"><img src={StretchImg}></img></div>
                         <div className="list-text"><text>10회 반복</text></div>
-                        </div>
                     </li>
                     <li>
-                        <div className="list-content">
                         <div className="list-img"><img src={SquatImg}></img></div>
                         <div className="list-text"><text>10회 반복</text></div>
-                        </div>
                     </li>
-                   
                 </ul>
+                <div className="btn-right"><text>&gt;</text></div>
+                </div>
             <div className="time-box">
                 <text>총 6개의 동작 추출</text><br/>
                 <text>예상 소요 시간: 00:20:00</text>
