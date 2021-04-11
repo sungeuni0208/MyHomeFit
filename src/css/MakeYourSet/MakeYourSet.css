@@ -140,6 +140,7 @@
 	width: 200px;
     border-radius: 20px;
     opacity:0;
+    display: inline-block;
 }
 
 .preview-img{
@@ -147,6 +148,42 @@
     padding-top: 10px;
     position: absolute;
 }
+.exercise-list{
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.exercise-list img{
+    width:240px;
+    height:240px;
+    padding: 20px 20px 20px 20px;
+}
+.list-content{
+    
+}
+.list-img{
+    width:280px;
+    height:280px;
+    background-color: #ffffff;
+    border: solid 2.5px #a7a6a6;
+    border-radius: 20%;
+}
+.list-text{
+    width: 100px;
+    height: 20px;
+    margin: 10px auto;
+    padding: 11px 14px 11px 15px;
+    object-fit: contain;
+    border-radius: 30px;
+    background-color: #ffffff;
+    border: solid 2.5px #a7a6a6;
+    text-align: center;
+    
+}
+.list-text text{
+    font-size: 20px;
+    color: #aaaaaa;
+} 
 .time-box{
     width: 340px;
     height: 120px;

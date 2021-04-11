@@ -50,15 +50,15 @@ const MakeYourSet = () => {
                
     
             </div>
-            <div>
                 <ul className="exercise-list">
                     <li>
-                        <img src={StretchImg}></img>
-                        <div>10회 반복</div>
+                    <div className="list-content">
+                        <div className="list-img"><img src={StretchImg}></img></div>
+                        <div className="list-text"><text>10회 반복</text></div>
+                        </div>
                     </li>
                    
                 </ul>
-            </div>
             <div className="time-box">
                 <p>총 6개의 동작 추출</p>
                 <p>예상 소요 시간: 00:20:00</p>
