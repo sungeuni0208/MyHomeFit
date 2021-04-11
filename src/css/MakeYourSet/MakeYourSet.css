@@ -143,19 +143,23 @@
     display: inline-block;
 }
 
-.preview-img{
-    padding-left: 10px;
-    padding-top: 10px;
-    position: absolute;
+.arrow-box img{
+    height: 180px;
+	width: 180px;
+    position: relative;
+    left: 7.5px;
+    top: 7.5px;
+    border: 2px solid #27cfb3;
 }
 .exercise-list{
     display: inline-block;
     width: 800px;
     margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 100px;
     padding-left: 0;
     white-space: nowrap;
     overflow-x: scroll;
+    position: absolute;
 }
 .exercise-list img{
     width:240px;
@@ -167,7 +171,7 @@
     list-style:none;
     display: inline-block;
     padding: 10px 10px 10px 10px;
-    background-color: none;
+    background-color: #f7f4f4;
     
 }
 .list-img{
@@ -175,7 +179,7 @@
     height:280px;
     background-color: #ffffff;
     border: solid 2.5px #a7a6a6;
-    border-radius: 20%;
+    border-radius: 10%;
 }
 .list-text{
     width: 100px;
@@ -194,19 +198,23 @@
     color: #aaaaaa;
 } 
 .time-box{
-    width: 340px;
-    height: 120px;
-    padding:10px 43px 40px 51px;
+    width: 350px;
+    height: 100px;
+  /*  */
     object-fit: contain;
     opacity: 0.51;
     border-radius: 50px;
     position:fixed;
     right: 50px;
-    bottom:50px;
+    bottom:30px;
     background-color: #a3daf9;
-    font-size: 30px;
+    text-align: center;
+}
+.time-box text{
+    font-size: 25px;
     line-height: 1em;
     text-align: center;
-    color: #565454 im !important;
+    color: #565454;
+    opacity: 1 !important;
     font-weight: bolder;
 }

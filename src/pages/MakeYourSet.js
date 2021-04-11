@@ -39,36 +39,37 @@ const MakeYourSet = () => {
             <div className="block-box">
                 <div className="box-wrapper">
                     <div className="block"><img src={RightIcon} className="send-icon"></img></div>
-                    <div className="arrow-box" ><img src={PreviewImg} className="preview-img"></img></div>
+                    <div className="arrow-box" ><img src={SquatImg} ></img></div>
                 </div>
                 <div className="box-wrapper">
                     <div className="block"><img src={RightIcon} className="send-icon"></img></div>
-                    <div className="arrow-box" ><img src={PreviewImg} className="preview-img"></img></div>
+                    <div className="arrow-box" ><img src={PreviewImg}></img></div>
                 </div>
                 <div className="box-wrapper">
                     <div className="block"><img src={RightIcon} className="send-icon"></img></div>
-                    <div className="arrow-box" ><img src={PreviewImg} className="preview-img"></img></div>
+                    <div className="arrow-box" ><img src={PreviewImg} ></img></div>
                 </div>
                 <div className="box-wrapper">
                     <div className="block"><img src={RightIcon} className="send-icon"></img></div>
-                    <div className="arrow-box" ><img src={PreviewImg} className="preview-img"></img></div>
+                    <div className="arrow-box" ><img src={PreviewImg} ></img></div>
                 </div>
                 <div className="box-wrapper">
                     <div className="block"><img src={RightIcon} className="send-icon"></img></div>
-                    <div className="arrow-box" ><img src={PreviewImg} className="preview-img"></img></div>
+                    <div className="arrow-box" ><img src={PreviewImg} ></img></div>
                 </div>
                 <div className="box-wrapper">
                     <div className="block"><img src={RightIcon} className="send-icon"></img></div>
-                    <div className="arrow-box" ><img src={PreviewImg} className="preview-img"></img></div>
+                    <div className="arrow-box" ><img src={PreviewImg}></img></div>
                 </div>
                 <div className="box-wrapper">
                     <div className="block"><img src={RightIcon} className="send-icon"></img></div>
-                    <div className="arrow-box" ><img src={PreviewImg} className="preview-img"></img></div>
+                    <div className="arrow-box" ><img src={PreviewImg} ></img></div>
                 </div>
                
     
             </div>
                 <ul className="exercise-list">
+                    <div></div>
                     <li>
                         
                         <div className="list-img"><img src={StretchImg}></img></div>
@@ -102,8 +103,8 @@ const MakeYourSet = () => {
                    
                 </ul>
             <div className="time-box">
-                <p>총 6개의 동작 추출</p>
-                <p>예상 소요 시간: 00:20:00</p>
+                <text>총 6개의 동작 추출</text><br/>
+                <text>예상 소요 시간: 00:20:00</text>
             </div>
         </div>
     );
