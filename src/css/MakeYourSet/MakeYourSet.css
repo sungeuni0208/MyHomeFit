@@ -101,34 +101,45 @@
     width: 100%;
 }
 .block{
-    position: relative;
     height: 80px;
     width: 300px;
     background-color: #27cfb3;
     border-radius: 100px;
     opacity: 0.5;
     margin-bottom:2px;
+    display: inline-block;
+    position: inherit;
 
 }
 .block-box{
     margin-top: 50px;
     margin-left: 100px;
+    display: inline-block;
+}
+.box-wrapper{
+    display: block;
+    position: relative;
 }
 .block:hover{
-    opacity:1 !important; 
+    opacity:1; 
+}
+.block:hover +.arrow-box{
+    opacity:1; 
 }
 .send-icon{
     padding-top:25px;
     padding-left:250px;
 }
-.arrow_box {
+.arrow-box {
 	position: absolute;
     right: 350px;
     top: 0px;
+    bottom:0px;
 	background: #d3d2d2;
     height: 200px;
 	width: 200px;
     border-radius: 20px;
+    opacity:0;
 }
 
 .preview-img{

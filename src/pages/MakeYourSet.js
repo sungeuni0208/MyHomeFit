@@ -4,6 +4,8 @@ import IconSet from '../images/icon_makeyourset.png';
 import SendIcon from '../images/url_send.png';
 import RightIcon from '../images/menu_right_clicked.png';
 import PreviewImg from '../images/running2.png';
+import StretchImg from '../images/stretch.png';
+import SquatImg from '../images/squat.png';
 
 const MakeYourSet = () => {
     return (
@@ -36,16 +38,26 @@ const MakeYourSet = () => {
             </div>
             <div className="block-box">
                 <div className="box-wrapper">
-                    <div className="block"><img src={RightIcon} className="send-icon"></img>
-                    <div className="arrow_box" ><img src={PreviewImg} className="preview-img"></img></div>
-                    </div>
-                    <div className="block"><img src={RightIcon} className="send-icon"></img>
-                    <div className="arrow_box"><img src={PreviewImg} className="preview-img"></img></div>
-                    </div>
+                    <div className="block"><img src={RightIcon} className="send-icon"></img></div>
+                    <div className="arrow-box" ><img src={PreviewImg} className="preview-img"></img></div>
+                    
+                </div>
+                <div className="box-wrapper">
+                    <div className="block"><img src={RightIcon} className="send-icon"></img></div>
+                    <div className="arrow-box" ><img src={PreviewImg} className="preview-img"></img></div>
                 </div>
 
                
     
+            </div>
+            <div>
+                <ul className="exercise-list">
+                    <li>
+                        <img src={StretchImg}></img>
+                        <div>10회 반복</div>
+                    </li>
+                   
+                </ul>
             </div>
             <div className="time-box">
                 <p>총 6개의 동작 추출</p>
