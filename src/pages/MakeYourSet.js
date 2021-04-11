@@ -40,20 +40,62 @@ const MakeYourSet = () => {
                 <div className="box-wrapper">
                     <div className="block"><img src={RightIcon} className="send-icon"></img></div>
                     <div className="arrow-box" ><img src={PreviewImg} className="preview-img"></img></div>
-                    
                 </div>
                 <div className="box-wrapper">
                     <div className="block"><img src={RightIcon} className="send-icon"></img></div>
                     <div className="arrow-box" ><img src={PreviewImg} className="preview-img"></img></div>
                 </div>
-
+                <div className="box-wrapper">
+                    <div className="block"><img src={RightIcon} className="send-icon"></img></div>
+                    <div className="arrow-box" ><img src={PreviewImg} className="preview-img"></img></div>
+                </div>
+                <div className="box-wrapper">
+                    <div className="block"><img src={RightIcon} className="send-icon"></img></div>
+                    <div className="arrow-box" ><img src={PreviewImg} className="preview-img"></img></div>
+                </div>
+                <div className="box-wrapper">
+                    <div className="block"><img src={RightIcon} className="send-icon"></img></div>
+                    <div className="arrow-box" ><img src={PreviewImg} className="preview-img"></img></div>
+                </div>
+                <div className="box-wrapper">
+                    <div className="block"><img src={RightIcon} className="send-icon"></img></div>
+                    <div className="arrow-box" ><img src={PreviewImg} className="preview-img"></img></div>
+                </div>
+                <div className="box-wrapper">
+                    <div className="block"><img src={RightIcon} className="send-icon"></img></div>
+                    <div className="arrow-box" ><img src={PreviewImg} className="preview-img"></img></div>
+                </div>
                
     
             </div>
                 <ul className="exercise-list">
                     <li>
-                    <div className="list-content">
+                        
                         <div className="list-img"><img src={StretchImg}></img></div>
+                        <div className="list-text"><text>10회 반복</text></div>
+                        
+                    </li>
+                    <li>
+                        <div className="list-content">
+                        <div className="list-img"><img src={SquatImg}></img></div>
+                        <div className="list-text"><text>10회 반복</text></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="list-content">
+                        <div className="list-img"><img src={PreviewImg}></img></div>
+                        <div className="list-text"><text>10회 반복</text></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="list-content">
+                        <div className="list-img"><img src={StretchImg}></img></div>
+                        <div className="list-text"><text>10회 반복</text></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div className="list-content">
+                        <div className="list-img"><img src={SquatImg}></img></div>
                         <div className="list-text"><text>10회 반복</text></div>
                         </div>
                     </li>
