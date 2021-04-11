@@ -48,3 +48,34 @@
 .menu3-small-title>label{
     color: #ffffff;
 }
+
+.fitnotes-fitness-container{
+    display: flex;
+    white-space:nowrap;
+    overflow-x:scroll;
+    width: 1500px;
+    height: 900px;
+}
+
+.fitnotes-fitness-container::-webkit-scrollbar{
+    height: 10px;
+    background-color: #ede9e9;
+    border-radius: 10px;
+}
+.fitnotes-fitness-container::-webkit-scrollbar-thumb{
+    background-color: #999494;
+    border-radius: 10px;
+}
+
+
+.recommend-container{
+    width: 630px;
+    height: 730px;
+    background-color: white;
+    margin-left: 60px;
+    margin-top: 30px;
+    border: 1px solid #707070;
+    border-radius: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
