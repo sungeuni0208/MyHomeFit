@@ -6,6 +6,8 @@ import RightIcon from '../images/menu_right_clicked.png';
 import PreviewImg from '../images/running2.png';
 import StretchImg from '../images/stretch.png';
 import SquatImg from '../images/squat.png';
+import LeftBtn from '../images/menu_left.png';
+import RightBtn from '../images/menu_right.png';
 
 const MakeYourSet = () => {
     return (
@@ -69,7 +71,7 @@ const MakeYourSet = () => {
     
             </div>
             <div className="list-wrapper">
-                <div className="btn-left"><text>&lt;</text></div>
+                <div className="btn-left"><img src={LeftBtn}></img></div>
                 <ul className="exercise-list">    
                     <li>
                         
@@ -95,7 +97,7 @@ const MakeYourSet = () => {
                         <div className="list-text"><text>10회 반복</text></div>
                     </li>
                 </ul>
-                <div className="btn-right"><text>&gt;</text></div>
+                <div className="btn-right"><img src={RightBtn}></img></div>
                 </div>
             <div className="time-box">
                 <text>총 6개의 동작 추출</text><br/>
