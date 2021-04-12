@@ -10,6 +10,7 @@ import LeftBtn from '../images/menu_left.png';
 import RightBtn from '../images/menu_right.png';
 
 const MakeYourSet = () => {
+
     return (
         <div className="content">
             <div className="menu1-wrapper">
@@ -75,7 +76,10 @@ const MakeYourSet = () => {
                 <ul className="exercise-list">    
                     <li>
                         
-                        <div className="list-img"><img src={StretchImg}></img></div>
+                        <div className="list-img">
+                            <img src={StretchImg}></img>
+                            <div> <h2>Squat</h2></div>
+                        </div>
                         <div className="list-text">10회 반복</div>
                         
                     </li>

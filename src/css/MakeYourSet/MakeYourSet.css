@@ -117,14 +117,16 @@
     display: inline-block;
 }
 .box-wrapper{
-    display: block;
+    display: flex;
+    align-items: flex-end;
+    flex-direction:column;
     position: relative;
 }
 .block:hover{
     opacity:1; 
 }
 .block:hover +.arrow-box{
-    opacity:1; 
+    display: inline-block; 
 }
 .send-icon{
     padding-top:25px;
@@ -139,8 +141,7 @@
     height: 200px;
 	width: 200px;
     border-radius: 20px;
-    opacity:0;
-    display: inline-block;
+    display: none;
 }
 
 .arrow-box img{
@@ -181,6 +182,14 @@
     background-color: #ffffff;
     border: solid 2.5px #a7a6a6;
     border-radius: 10%;
+}
+.list-img div{
+    display:none;
+}
+.exercise-list li:hover{
+    width:320px;
+    height:320px;
+
 }
 .list-text{
     width: 100px;
