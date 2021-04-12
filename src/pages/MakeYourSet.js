@@ -76,7 +76,7 @@ const MakeYourSet = () => {
                     <li>
                         
                         <div className="list-img"><img src={StretchImg}></img></div>
-                        <div className="list-text"><text>10회 반복</text></div>
+                        <div className="list-text">10회 반복</div>
                         
                     </li>
                     <li>
@@ -100,8 +100,8 @@ const MakeYourSet = () => {
                 <div className="btn-right"><img src={RightBtn}></img></div>
                 </div>
             <div className="time-box">
-                <text>총 6개의 동작 추출</text><br/>
-                <text>예상 소요 시간: 00:20:00</text>
+                <div>총 6개의 동작 추출</div><br/>
+                <div>예상 소요 시간: 00:20:00</div>
             </div>
         </div>
     );
