@@ -9,6 +9,9 @@ import SquatImg from '../images/squat.png';
 import LeftBtn from '../images/menu_left.png';
 import RightBtn from '../images/menu_right.png';
 
+
+import SetBox from "../components/MakeYourSet/SetBox";
+
 const MakeYourSet = () => {
 
     return (
@@ -40,35 +43,11 @@ const MakeYourSet = () => {
                     <label>Make Your Fitness Set.</label>
             </div>
             <div className="block-box">
-                <div className="box-wrapper">
-                    <div className="block"><img src={RightIcon} className="send-icon"></img></div>
-                    <div className="arrow-box" ><img src={SquatImg} ></img></div>
-                </div>
-                <div className="box-wrapper">
-                    <div className="block"><img src={RightIcon} className="send-icon"></img></div>
-                    <div className="arrow-box" ><img src={PreviewImg}></img></div>
-                </div>
-                <div className="box-wrapper">
-                    <div className="block"><img src={RightIcon} className="send-icon"></img></div>
-                    <div className="arrow-box" ><img src={PreviewImg} ></img></div>
-                </div>
-                <div className="box-wrapper">
-                    <div className="block"><img src={RightIcon} className="send-icon"></img></div>
-                    <div className="arrow-box" ><img src={PreviewImg} ></img></div>
-                </div>
-                <div className="box-wrapper">
-                    <div className="block"><img src={RightIcon} className="send-icon"></img></div>
-                    <div className="arrow-box" ><img src={PreviewImg} ></img></div>
-                </div>
-                <div className="box-wrapper">
-                    <div className="block"><img src={RightIcon} className="send-icon"></img></div>
-                    <div className="arrow-box" ><img src={PreviewImg}></img></div>
-                </div>
-                <div className="box-wrapper">
-                    <div className="block"><img src={RightIcon} className="send-icon"></img></div>
-                    <div className="arrow-box" ><img src={PreviewImg} ></img></div>
-                </div>
-               
+                <SetBox name="Squat"/>
+                <SetBox name="Squat"/>
+                <SetBox name="Squat"/>
+                <SetBox name="Squat"/>
+                <SetBox name="Squat"/>
     
             </div>
             <div className="list-wrapper">
