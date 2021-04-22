@@ -6,7 +6,10 @@ import SquatImg from '../../images/squat.png';
 const SetBox =({name}) => {
     return(
         <div className="box-wrapper">
-            <div className="block"><img src={RightIcon} className="send-icon"></img></div>
+            <div className="block">
+                <label>{name}</label>
+                <img src={RightIcon}></img>
+            </div>
             <div className="arrow-box" ><img src={SquatImg} ></img></div>
         </div>
     )

@@ -5,9 +5,23 @@
     border-radius: 100px;
     opacity: 0.5;
     margin-bottom:2px;
-    display: inline-block;
-    position: inherit;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.block img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 15px;
+}
+.block label{
+    width:inherit;
+    color:white;
+    font-size: 30px;
+    display: flex;
+    margin-left: 100px;
+    font-family: NanumSquare_acEB;
 }
 .box-wrapper{
     display: flex;
@@ -20,6 +34,9 @@
 }
 .block:hover +.arrow-box{
     display: inline-block; 
+}
+.block:hover +.block label{
+    font-weight: bolder;
 }
 .arrow-box {
 	position: absolute;

@@ -2,7 +2,6 @@ import React from 'react';
 import '../css/MakeYourSet/MakeYourSet.css';
 import IconSet from '../images/icon_makeyourset.png';
 import SendIcon from '../images/url_send.png';
-import RightIcon from '../images/menu_right_clicked.png';
 import PreviewImg from '../images/running2.png';
 import StretchImg from '../images/stretch.png';
 import SquatImg from '../images/squat.png';
