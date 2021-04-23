@@ -10,8 +10,8 @@ import RightBtn from '../images/menu_right.png';
 
 
 import SetBox from "../components/MakeYourSet/SetBox";
-import FitnessPicture from "../components/MakeYourSet/FitnessPicture";
-import FitnessCount from '../components/MakeYourSet/FitnessCount';
+import ListBlock from '../components/MakeYourSet/ListBlock';
+
 
 const MakeYourSet = () => {
 
@@ -53,31 +53,12 @@ const MakeYourSet = () => {
             </div>
             <div className="list-wrapper">
                 <div className="btn-left"><img src={LeftBtn}></img></div>
-                <ul className="exercise-list">    
-                    <li>
-                        
-                        <FitnessPicture name={SquatImg}/>
-                        <FitnessCount name="10"/>
-                        
-                    </li>
-                    <li>
-                        <div className="list-img"><img src={SquatImg}></img></div>
-                        <div className="list-text"><text>10회 반복</text></div>
-                    </li>
-                    <li>
-                        <div className="list-img"><img src={PreviewImg}></img></div>
-                        <div className="list-text"><text>10회 반복</text></div>
-
-                    </li>
-                    <li>
-                        <div className="list-img"><img src={StretchImg}></img></div>
-                        <div className="list-text"><text>10회 반복</text></div>
-                    </li>
-                    <li>
-                        <div className="list-img"><img src={SquatImg}></img></div>
-                        <div className="list-text"><text>10회 반복</text></div>
-                    </li>
-                </ul>
+                <div className="exercise-list">    
+                    <ListBlock name="Squat"/>
+                    <ListBlock name="Squat"/>
+                    <ListBlock name="Squat"/>
+                    <ListBlock name="Squat"/>
+                </div>
                 <div className="btn-right"><img src={RightBtn}></img></div>
                 </div>
             <div className="time-box">

@@ -6,7 +6,7 @@ import SquatImg from '../../images/squat.png';
 const FitnessPicture = ({name}) =>{
     return(
         <div className="list-img">
-            <img src={name}></img>
+                <img src={SquatImg}></img>
         </div>
     )
 }

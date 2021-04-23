@@ -122,20 +122,6 @@
     overflow-x: scroll;
     position: absolute;
 }
-.exercise-list li{
-    list-style:none;
-    display: inline-block;
-    padding: 10px 10px 10px 10px;
-    background-color: #f7f4f4;
-    
-}
-
-.exercise-list li:hover{
-    width:320px;
-    height:320px;
-
-}
-
 .time-box{
     opacity: 0.51;
     border-radius: 40px;
