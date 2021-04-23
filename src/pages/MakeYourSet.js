@@ -10,6 +10,8 @@ import RightBtn from '../images/menu_right.png';
 
 
 import SetBox from "../components/MakeYourSet/SetBox";
+import FitnessPicture from "../components/MakeYourSet/FitnessPicture";
+import FitnessCount from '../components/MakeYourSet/FitnessCount';
 
 const MakeYourSet = () => {
 
@@ -54,11 +56,8 @@ const MakeYourSet = () => {
                 <ul className="exercise-list">    
                     <li>
                         
-                        <div className="list-img">
-                            <img src={StretchImg}></img>
-                            <div> <h2>Squat</h2></div>
-                        </div>
-                        <div className="list-text">10회 반복</div>
+                        <FitnessPicture name={SquatImg}/>
+                        <FitnessCount name="10"/>
                         
                     </li>
                     <li>

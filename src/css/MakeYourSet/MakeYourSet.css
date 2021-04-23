@@ -122,12 +122,6 @@
     overflow-x: scroll;
     position: absolute;
 }
-.exercise-list img{
-    width:240px;
-    height:240px;
-    padding: 20px 20px 20px 20px;
-    
-}
 .exercise-list li{
     list-style:none;
     display: inline-block;
@@ -135,33 +129,13 @@
     background-color: #f7f4f4;
     
 }
-.list-img{
-    width:280px;
-    height:280px;
-    background-color: #ffffff;
-    border: solid 2.5px #a7a6a6;
-    border-radius: 10%;
-}
-.list-img div{
-    display:none;
-}
+
 .exercise-list li:hover{
     width:320px;
     height:320px;
 
 }
-.list-text{
-    width: 100px;
-    height: 20px;
-    margin: 10px auto;
-    padding: 11px 14px 11px 20px;
-    border-radius: 30px;
-    background-color: #ffffff;
-    border: solid 2.5px #a7a6a6;
-    text-align: center;
-    font-size: 20px;
-    color: #aaaaaa;
-}
+
 .time-box{
     opacity: 0.51;
     border-radius: 40px;
