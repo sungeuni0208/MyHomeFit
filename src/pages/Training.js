@@ -5,6 +5,7 @@ import IconNextVideo from "../images/icon_next_video.png"
 import PoseShoulder from "../images/pose_shoulder.png"
 import MenuUp from "../images/menu_up.png"
 import NextPose from "../components/Training/NextPose";
+import Webcam from "react-webcam";
 
 const Training = () => {
     return (
@@ -32,14 +33,16 @@ const Training = () => {
                     </div>
                 </div>
                 <div className="realtime-video">
-                    <div className="user-video"></div>
-                    <div className="export-video"></div>
+                    <div className="user-video">
+                        <Webcam className="user-webcam" />
+                    </div>
+                    <div className="export-video" />
                 </div>
                 <div className="next-pose">
-                    <NextPose backgroundcolor="rgba(240, 237, 237, 0.4)"/>
-                    <NextPose backgroundcolor="#b6f4ea"/>
-                    <NextPose backgroundcolor="#b6f4ea"/>
-                    <NextPose backgroundcolor="#b6f4ea"/>
+                    <NextPose background_color="rgba(240, 237, 237, 0.4)"/>
+                    <NextPose background_color="#b6f4ea"/>
+                    <NextPose background_color="#b6f4ea"/>
+                    <NextPose background_color="#b6f4ea"/>
                 </div>
             </div>
         </div>
