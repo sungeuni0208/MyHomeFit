@@ -1,6 +1,8 @@
 import React from 'react';
 import "../css/FitNotes/FitNotes.css"
 import IconFitnotes from "../images/icon_fitnotes.png"
+import FitnessRank from "../components/FitNotes/FitnessRank";
+import RecommendFitness from "../components/FitNotes/RecommendFitness";
 
 const FitNotes = () => {
     return (
@@ -16,6 +18,27 @@ const FitNotes = () => {
             </div>
             <div className="menu3-small-title">
                 <label>Hi Gaok, This is your FitNotes.</label>
+            </div>
+
+            <div className="fitnotes-fitness-container">
+                <div>
+                    <FitnessRank name="New"/>
+                    <FitnessRank name="Top"/>
+                </div>
+                <div className="recommend-container">
+                    <RecommendFitness name="Gaok"/>
+                </div>
+
+                <div className="recommend-container">
+                    <RecommendFitness name="Gaok"/>
+                </div>
+                <div className="recommend-container">
+                    <RecommendFitness name="Gaok"/>
+                </div>
+                <div className="recommend-container">
+                    <RecommendFitness name="Gaok"/>
+                </div>
+
             </div>
         </div>
     );
