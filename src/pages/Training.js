@@ -4,6 +4,8 @@ import IconTraining from "../images/icon_training.png"
 import IconNextVideo from "../images/icon_next_video.png"
 import PoseShoulder from "../images/pose_shoulder.png"
 import MenuUp from "../images/menu_up.png"
+import NextPose from "../components/Training/NextPose";
+
 const Training = () => {
     return (
         <div className="menu2-container">
@@ -22,18 +24,22 @@ const Training = () => {
             <div className="videos">
                 <img src={MenuUp}/>
                 <div className="next-video">
-                    <div>
-                        Next
+                    <div className="next-video-label">
+                        Next<img src={IconNextVideo}/>
                     </div>
-                    <img src={PoseShoulder}/>
+                    <div className="next-video-pose">
+                        <img src={PoseShoulder}/>
+                    </div>
                 </div>
-                <div className="user-video">
+                <div className="realtime-video">
+                    <div className="user-video"></div>
+                    <div className="export-video"></div>
                 </div>
-                <div>
-                    <div className="next-videos" id="just-next-video"></div>
-                    <div className="next-videos"></div>
-                    <div className="next-videos"></div>
-                    <div className="next-videos"></div>
+                <div className="next-pose">
+                    <NextPose backgroundcolor="rgba(240, 237, 237, 0.4)"/>
+                    <NextPose backgroundcolor="#b6f4ea"/>
+                    <NextPose backgroundcolor="#b6f4ea"/>
+                    <NextPose backgroundcolor="#b6f4ea"/>
                 </div>
             </div>
         </div>
