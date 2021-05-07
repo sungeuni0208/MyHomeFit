@@ -50,14 +50,15 @@
 }
 
 .videos{
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     margin-top: 20px;
 }
 
 .videos> img{
+    position: relative;
     width: 40px;
     height: 40px;
     bottom: 410px;
@@ -65,7 +66,6 @@
     background-color: #ffffff;
     padding: 10px;
     border-radius: 50%;
-    position: relative;
 }
 
 .next-video{
@@ -123,6 +123,7 @@
     border-right: 0.5px solid darkgray;
     border-bottom: 7px dashed #b6f4ea;
     border-radius: 70px 0px 0px 70px;
+
 }
 
 .export-video{
@@ -140,8 +141,15 @@
     border-radius: 0px 70px 70px 0px;
 }
 
+.user-webcam{
+    object-fit: cover;
+    width: 538px;
+    height: 1000px;
+    margin-right: 5px;
+    border-radius: 70px 0px 0px 70px;
+}
+
 .next-pose{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
 }
