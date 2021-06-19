@@ -9,7 +9,6 @@ export type CalculateMessage = {
 export function CalculatePosesWorker(){
 
 	class CalculatePoses{
-		
 		private bodyPartsCombinations: {[prop: string]: string[]} = {
 			"leftArmpit": ["leftShoulder","leftElbow", 'leftHip'],
 			"rightArmpit": ["rightShoulder","rightElbow", 'rightHip'],
@@ -24,7 +23,6 @@ export function CalculatePosesWorker(){
 			'leftKnee':['leftKnee','leftAnkle','leftHip',],
 			'rightKnee':['rightKnee','rightAnkle','rightHip'],
 		}
-		
 
 		constructor(){
 			self.addEventListener('message', ({data})=>this.handleMessage(data));

@@ -2,7 +2,6 @@ import * as posenet from '@tensorflow-models/posenet';
 import * as knn from '@tensorflow-models/knn-classifier';
 import * as tf from '@tensorflow/tfjs';
 
-
 import yolo from 'tfjs-yolo';
 import { Singleton } from '../classses/singleton.class';
 import { AppConfig } from '../utilities/action-calculator.util';
@@ -45,6 +44,7 @@ export class EstimatorService extends Singleton<PoseEstimatorPayload>{
             inputResolution: {width: 224, height: 224},
             ...payload
         });
+
         // const actionClassifier$ = await tf.loadLayersModel('/model/actions_recognizer/model.json');
         const actionClassifier$ = await knn.create();
         const conf = AppConfig;
@@ -53,16 +53,15 @@ export class EstimatorService extends Singleton<PoseEstimatorPayload>{
             const action = conf.actions[actionString];
             action.dataset.forEach(ds => this.actionClassifier.addExample(tf.tensor1d(ds), actionString));
         })
+
         await Promise.all([yolo$, net$])
         .then(([yolo, net]) => { 
             this.yolo = yolo;
             this.net = net;
-            
         })
         this.loaded = true;
     }
-    
-    
+
     loadedNotify() {
         return this.loaded$;
     }
@@ -101,6 +100,7 @@ export class EstimatorService extends Singleton<PoseEstimatorPayload>{
         }
         const [pose] = await Promise.all([this.poseEstimator(image, payload)]);
         if(pose){
+
             pose.estimationTime = date.getTime();
         }
         return pose

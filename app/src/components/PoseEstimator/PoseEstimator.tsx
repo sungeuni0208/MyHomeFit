@@ -61,8 +61,7 @@ export default class PoseEstimator extends React.Component<any, any> {
   
   constructor(props) {
     super(props);
-    
-    
+
     this.estimator.init({inputResolution: PoseEstimator.DIMENSIONS});
     INIT_STATE.minScoreToDraw = this.estimator.getMinScore();
     this.state = INIT_STATE;
@@ -72,7 +71,6 @@ export default class PoseEstimator extends React.Component<any, any> {
     this.poseOnlyCanvas = React.createRef();
     this.videoPlayer = React.createRef();
   }
-  
   
   setProp(prop: keyof typeof INIT_STATE, value: any): void {
     this.setState({ ...this.state, ...{ [prop]: value } });
@@ -332,135 +330,133 @@ export default class PoseEstimator extends React.Component<any, any> {
       render() {
         return (
           <div className="pose-visualizer-page">
-          {!this.state.loaded && <section className='loader'>Loading Neural Network...</section>}
-          <div className="picture-button-container">
-          <Select
-          value={''}
-          onChange={(ev) => this.loadImageAndRunPosenet(ev.target.value)}
-          >
-          {
-            this.picturesToLoad.map(path => {
-              const name = path.split('/').pop()
-              return <MenuItem key={name} value={`/img/poses${path}`}>{name}</MenuItem>
-            })
-          }
-          </Select>
-          {
-            this.videosToLoad.map((videoName, key) => {
-              return <Button
-              key={key}
-              variant="contained"
-              color="primary"
-              onClick={() => this.loadVideoToCanvasAndRunPosenet(`/video/${videoName}`)}>
-              {videoName}
+            {!this.state.loaded && <section className='loader'>Loading Neural Network...</section>}
+
+            <div className="picture-button-container">
+              <Select
+                value={''}
+                onChange={(ev) => this.loadImageAndRunPosenet(ev.target.value)}
+              >
+                {
+                  this.picturesToLoad.map(path => {
+                    const name = path.split('/').pop()
+                    return <MenuItem key={name} value={`/img/poses${path}`}>{name}</MenuItem>
+                  })
+                }
+              </Select>
+              {
+                this.videosToLoad.map((videoName, key) => {
+                  return <Button
+                  key={key}
+                  variant="contained"
+                  color="primary"
+                  onClick={() => this.loadVideoToCanvasAndRunPosenet(`/video/${videoName}`)}>
+                  {videoName}
+                  </Button>
+
+                })
+              }
+              <Button variant="contained"
+                color="primary"
+                onClick={this.loadWebcamVideoToCanvasAndRunPosenet.bind(this)}>
+                Camera
               </Button>
-              
-            })
-          }
-          <Button variant="contained"
-          color="primary"
-          onClick={this.loadWebcamVideoToCanvasAndRunPosenet.bind(this)}>
-          Camera</Button>
-          <Button variant="contained"
-          color="secondary"
-          onClick={this.buildDataset.bind(this)}
-          >Build dataset</Button>
-          </div>
-          <div className="pose-display">
+
+              <Button variant="contained"
+                color="secondary"
+                onClick={this.buildDataset.bind(this)}>
+                  Build dataset
+              </Button>
+            </div>
+            <div className="pose-display">
+              <div className="pose-info">
           
-          <div className="pose-info">
+                <video
+              muted
+              autoPlay
+              {...PoseEstimator.DIMENSIONS}
+              style={{ display: this.getProp('videoSelected') ? 'initial' : 'none' }}
+              ref={this.videoPlayer}
+              controls={true} />
           
-          
-          <video
-          muted
-          autoPlay
-          {...PoseEstimator.DIMENSIONS}
-          style={{ display: this.getProp('videoSelected') ? 'initial' : 'none' }}
-          ref={this.videoPlayer}
-          controls={true} />
-          
-          <PoseInfo
-          title="Mean accuracy score"
-          value={[this.state.pose?.score]}
-          />
-          <div className="preview-container">
-          <div className="preview-interaction">
-          <div>{this.state?.hoveredPoint?.part} - {this.state?.hoveredPoint?.score} - Angle: {JSON.stringify(this.state?.hoveredPoint?.angle, null ,2)}</div>
-          </div>
-          <div className="canvas-container">
-          <canvas className="overlay-canvas" ref={this.previewCanvas} 
-          {...PoseEstimator.DIMENSIONS}
-          ></canvas>
-          <canvas className="overlay-canvas" ref={this.overlayCanvas} 
-          {...PoseEstimator.DIMENSIONS}
-          onMouseDown={this.onCanvasHover.bind(this)}></canvas>
-          <canvas ref={this.poseOnlyCanvas} 
-          {...PoseEstimator.DIMENSIONS}
-          ></canvas>
-          </div>
-          </div>
+
+              <div className="preview-container">
+
+              <div className="canvas-container">
+                <canvas className="overlay-canvas" ref={this.previewCanvas}
+                {...PoseEstimator.DIMENSIONS}
+                ></canvas>
+                <canvas className="overlay-canvas" ref={this.overlayCanvas}
+                {...PoseEstimator.DIMENSIONS}
+                onMouseDown={this.onCanvasHover.bind(this)}></canvas>
+                <canvas ref={this.poseOnlyCanvas}
+                {...PoseEstimator.DIMENSIONS}
+                ></canvas>
+              </div>
+            </div>
           
           
           <div>
-          <PoseInfo
-          title="Action"
-          value={[JSON.stringify(this.state.estimatedAction)]}
-          />
-          <PoseInfo
-          title="Counters"
-          value={[JSON.stringify(this.state.counters)]}
-          />
-          <FormControlLabel
-          label="Auto min score"
-          control={
-            <Checkbox
-            onChange={(e) => this.setProp('autoMinScore', e.target.checked)}
-            checked={this.state.autoMinScore}
-            inputProps={{ 'aria-label': 'autoMinScore:' }}
+            <PoseInfo
+            title="Action"
+            value={[JSON.stringify(this.state.estimatedAction)]}
             />
-          } />
-          <FormControlLabel
-          label="Draw lines"
-          control={
-            <Checkbox
-            onChange={(e) => this.setProp('renderLines', e.target.checked)}
-            checked={this.state.renderLines}
-            inputProps={{ 'aria-label': 'renderLines:' }}
+            <PoseInfo
+            title="Counters"
+            value={[JSON.stringify(this.state.counters)]}
             />
-          } />
-          <FormControlLabel
-          label="Show detailed score"
-          control={
-            <Checkbox
-            onChange={(e) => this.setProp('showDetailedScore', e.target.checked)}
-            checked={this.state.showDetailedScore}
-            inputProps={{ 'aria-label': 'showDetailedScore:' }}
-            />
-          } />
+            <FormControlLabel
+            label="Auto min score"
+            control={
+              <Checkbox
+              onChange={(e) => this.setProp('autoMinScore', e.target.checked)}
+              checked={this.state.autoMinScore}
+              inputProps={{ 'aria-label': 'autoMinScore:' }}
+              />
+            } />
+            <FormControlLabel
+            label="Draw lines"
+            control={
+              <Checkbox
+              onChange={(e) => this.setProp('renderLines', e.target.checked)}
+              checked={this.state.renderLines}
+              inputProps={{ 'aria-label': 'renderLines:' }}
+              />
+            } />
+            <FormControlLabel
+            label="Show detailed score"
+            control={
+              <Checkbox
+              onChange={(e) => this.setProp('showDetailedScore', e.target.checked)}
+              checked={this.state.showDetailedScore}
+              inputProps={{ 'aria-label': 'showDetailedScore:' }}
+              />
+            } />
           
-          </div>
+            </div>
           <div>
           Min Score: {this.state.minScoreToDraw}
-          <Slider
-          onChange={(e, val) => this.setProp('minScoreToDraw', val)}
-          value={this.state.minScoreToDraw}
-          max={1}
-          min={0}
-          step={0.05}
-          />
+            <Slider
+            onChange={(e, val) => this.setProp('minScoreToDraw', val)}
+            value={this.state.minScoreToDraw}
+            max={1}
+            min={0}
+            step={0.05}
+            />
           </div>
+
           <div>
           Video capture interval: {this.state.videoCaptureTimeout}
-          <Slider
-          onChange={(e, val) => this.setProp('videoCaptureTimeout', val)}
-          value={this.state.videoCaptureTimeout}
-          aria-labelledby="discrete-slider"
-          valueLabelDisplay="auto"
-          step={10}
-          marks
-          min={0}
-          max={2000}
-          />
+            <Slider
+            onChange={(e, val) => this.setProp('videoCaptureTimeout', val)}
+            value={this.state.videoCaptureTimeout}
+            aria-labelledby="discrete-slider"
+            valueLabelDisplay="auto"
+            step={10}
+            marks
+            min={0}
+            max={2000}
+            />
           </div>
           
           {this.state.showDetailedScore && 
