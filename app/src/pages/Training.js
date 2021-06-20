@@ -6,6 +6,9 @@ import PoseShoulder from "../images/pose_shoulder.png"
 import MenuUp from "../images/menu_up.png"
 import NextPose from "../components/Training/NextPose";
 import PoseEstimator from "../components/PoseEstimator/PoseEstimator";
+import Webcam from "react-webcam";
+import myVideo from '../images/squatvideo.mp4'
+import ReactPlayer from 'react-player'
 
 const Training = () => {
     return (
@@ -36,7 +39,12 @@ const Training = () => {
                     <div className="user-video">
                         <PoseEstimator />
                     </div>
-                    <div className="export-video" />
+                    <div className="export-video">
+                        <ReactPlayer className="export"
+                                     width="100%"
+                                     height="100%"
+                                     url={myVideo} loop muted playing controls />
+                    </div>
                 </div>
                 <div className="next-pose">
                     <NextPose background_color="rgba(240, 237, 237, 0.4)"/>

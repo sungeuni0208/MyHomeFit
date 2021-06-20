@@ -15,6 +15,7 @@ import { frameTimeMS, AppConfig } from '../../utilities/action-calculator.util';
 import { SpeechService } from '../../services/speech.service';
 import { IMAGE_MAPPING } from '../../constants/image.mapping';
 import { VIDEOS_MAPPING } from '../../constants/video.mapping';
+import Webcam from "react-webcam";
 
 const INIT_STATE = {
   videoSelected: false,
@@ -33,10 +34,9 @@ const INIT_STATE = {
 };
 
 export default class PoseEstimator extends React.Component<any, any> {
-  static readonly DIMENSIONS = {width: 224, height: 224}
+  static readonly DIMENSIONS = {width: 224, height:224}
   public readonly picturesToLoad = IMAGE_MAPPING || [];
   public readonly videosToLoad = VIDEOS_MAPPING || [];
-  
   
   public autoCalc: boolean = false;
   public showPoseOnlyPreview: boolean = true;
@@ -144,11 +144,11 @@ export default class PoseEstimator extends React.Component<any, any> {
         const counters =  {...this.state.counters};
         counters[data.action] =  counter;
         this.setProp('counters', counters);
-        SpeechService.talk([counter, data.action].join(' '));
-      }else if(data?.score >= 0.5 && this.getProp('estimatedAction') !== 'UNKONWN'){
-        SpeechService.talk("Almost there, keep going")
-        this.setProp('estimatedAction', {action:"UNKNOWN"});
-      }
+        SpeechService.talk([counter, data.action].join(' '));}
+      // }else if(data?.score >= 0.5 && this.getProp('estimatedAction') !== 'UNKONWN'){
+      //   SpeechService.talk("Almost there, keep going")
+      //   this.setProp('estimatedAction', {action:"UNKNOWN"});
+      // }
     }
     
     async processPoseEstimation({data}){
@@ -332,6 +332,10 @@ export default class PoseEstimator extends React.Component<any, any> {
           <div className="pose-visualizer-page">
             {!this.state.loaded && <section className='loader'>Loading Neural Network...</section>}
 
+            <Webcam className="user-webcam"
+                    width="500" height="1000"/>
+
+
             <div className="picture-button-container">
               <Select
                 value={''}
@@ -344,6 +348,7 @@ export default class PoseEstimator extends React.Component<any, any> {
                   })
                 }
               </Select>
+
               {
                 this.videosToLoad.map((videoName, key) => {
                   return <Button

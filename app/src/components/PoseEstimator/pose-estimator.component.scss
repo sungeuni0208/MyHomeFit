@@ -1,34 +1,42 @@
 .pose-visualizer-page{
-  background-color: #27cfb3;
-    .picture-button-container{
-      display: flex;
-      .pose-button{
-        max-width: 300px;
-      }
-    }
+  //background-color: #27cfb3;
+  //padding-top: 280px;
+  .picture-button-container{
     display: flex;
-    flex-direction: column;
-    .pose-display{
-      display: flex;
-      flex-direction: row;
-      .canvas-container{
-        position: relative;
-        .overlay-canvas{
-          position: absolute;
-          top:0;
-        }
+    .pose-button{
+      max-width: 300px;
+    }
+  }
+  display: flex;
+  flex-direction: column;
+  .pose-display{
+    display: flex;
+    flex-direction: row;
+    .pose-info video{
+      visibility:hidden;
+      position: absolute;
+    }
+    .canvas-container{
+      position: relative;
+      position: absolute;
+      visibility:hidden;
+      .overlay-canvas{
+        position: absolute;
+        top:0;
+        visibility:hidden;
       }
     }
   }
+}
 
-  .loader{
-    display: flex;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    opacity: .7;
-    z-index: 1000;
-  }
+.loader{
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  opacity: .7;
+  z-index: 1000;
+}

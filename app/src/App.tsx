@@ -15,14 +15,12 @@ function App() {
 
     <div className='main-container'>
         <SideMenubar />
-        <BrowserRouter>
-            <Switch>
+
         <Route path="/makeyourset" exact={true} component={MakeYourSet} />
         <Route path="/training" component={Training} />
         <Route path="/fitnotes" component={FitNotes} />
         <Route path="/calender" component={Calender} />
-            </Switch>
-        </BrowserRouter>
+
     </div>
   );
 }

@@ -32,11 +32,11 @@ const SideMenubar = () => {
                 <ul>
                     <div className={menu==1?"clicked":"unclicked"}>
                         <li onClick={() => setMenu(1)}>
-                            <BrowserRouter>
+
                             <Link to="/makeyourset">
                                 {menu === 1 ? <img src={AddClicked}/> : <img src={Add}/>}
                             </Link>
-                            </BrowserRouter>
+
                             <div>
                                 <label>Make Your Set</label>
                                 {menu===1? <img src={RightClicked}/>:<img src={Right}/>}
@@ -45,11 +45,11 @@ const SideMenubar = () => {
                     </div>
                     <div className={menu==2?"clicked":"unclicked"}>
                         <li onClick={() => setMenu(2)}>
-                            <BrowserRouter>
+
                             <Link to="/training">
                                 {menu === 2 ? <img src={PlayClicked}/> : <img src={Play}/>}
                             </Link>
-                            </BrowserRouter>
+
                             <div>
                                 <label>Training</label>
                                 {menu===2? <img src={RightClicked}/>:<img src={Right}/>}
@@ -58,11 +58,11 @@ const SideMenubar = () => {
                     </div>
                     <div className={menu==3?"clicked":"unclicked"}>
                         <li onClick={() => setMenu(3)}>
-                            <BrowserRouter>
+
                             <Link to="/fitnotes">
                                 {menu === 3 ? <img src={FitNotesClicked}/> : <img src={FitNotes}/>}
                             </Link>
-                            </BrowserRouter>
+
                             <div>
                                 <label>Fit Notes</label>
                                 {menu===3? <img src={RightClicked}/>:<img src={Right}/>}
@@ -71,11 +71,11 @@ const SideMenubar = () => {
                     </div>
                     <div className={menu==4?"clicked":"unclicked"}>
                         <li onClick={() => setMenu(4)}>
-                            <BrowserRouter>
+
                             <Link to="/calender">
                                 {menu === 4 ? <img src={CalenderClicked}/> : <img src={Calender}/>}
                             </Link>
-                            </BrowserRouter>
+
                             <div>
                                 <label>Calender</label>
                                 {menu===4? <img src={RightClicked}/>:<img src={Right}/>}

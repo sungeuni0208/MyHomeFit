@@ -149,10 +149,9 @@
 
 .user-webcam{
     object-fit: cover;
-    width: 538px;
-    height: 1000px;
+    width: 500px;
+    height: 500px;
     margin-right: 5px;
-    border-radius: 70px 0px 0px 70px;
 }
 
 .next-pose{
