@@ -1,6 +1,7 @@
 import React from 'react';
 import "../css/Calender/Calender.css"
 import IconCalender from "../images/icon_calender.png"
+import FitCards from "../images/fitCards.JPG"
 
 const Calender = () => {
     return (
@@ -16,6 +17,10 @@ const Calender = () => {
             </div>
             <div className="menu4-small-title">
                 <label>Hi Gaok, Check your Calender.</label>
+            </div>
+
+            <div className="calendar-content">
+                <img src={FitCards} width="1300"/>
             </div>
         </div>
     );

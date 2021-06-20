@@ -26,5 +26,5 @@ export class SpeechService{
 
 }
 
-SpeechService.setVoice('Google UK English Female');
-SpeechService.setLanguage('en-GB');
+SpeechService.setVoice('Google South Korea Korean Female');
+SpeechService.setLanguage('ko-KR');

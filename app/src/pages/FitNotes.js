@@ -3,6 +3,7 @@ import "../css/FitNotes/FitNotes.css"
 import IconFitnotes from "../images/icon_fitnotes.png"
 import FitnessRank from "../components/FitNotes/FitnessRank";
 import RecommendFitness from "../components/FitNotes/RecommendFitness";
+import FitnessCalories from "../components/FitNotes/FitnessCalories";
 
 const FitNotes = () => {
     return (
@@ -22,8 +23,8 @@ const FitNotes = () => {
 
             <div className="fitnotes-fitness-container">
                 <div>
-                    <FitnessRank name="New"/>
                     <FitnessRank name="Top"/>
+                    <FitnessCalories/>
                 </div>
                 <div className="recommend-container">
                     <RecommendFitness name="Gaok"/>

@@ -328,6 +328,7 @@ export default class PoseEstimator extends React.Component<any, any> {
       
       
       render() {
+
         return (
           <div className="pose-visualizer-page">
             {!this.state.loaded && <section className='loader'>Loading Neural Network...</section>}
@@ -403,24 +404,26 @@ export default class PoseEstimator extends React.Component<any, any> {
           
           <div>
             <PoseInfo
-            title="Action"
+            title="동작"
             value={[JSON.stringify(this.state.estimatedAction)]}
             />
             <PoseInfo
-            title="Counters"
+            title="동작 횟수"
             value={[JSON.stringify(this.state.counters)]}
             />
+
+            <div className="checkbox">
             <FormControlLabel
-            label="Auto min score"
+            label=""
             control={
               <Checkbox
-              onChange={(e) => this.setProp('autoMinScore', e.target.checked)}
-              checked={this.state.autoMinScore}
-              inputProps={{ 'aria-label': 'autoMinScore:' }}
+                  onChange={(e) => this.setProp('autoMinScore', e.target.checked)}
+                  checked={this.state.autoMinScore}
+                  inputProps={{ 'aria-label': 'autoMinScore:' }}
               />
             } />
             <FormControlLabel
-            label="Draw lines"
+            label=""
             control={
               <Checkbox
               onChange={(e) => this.setProp('renderLines', e.target.checked)}
@@ -429,7 +432,7 @@ export default class PoseEstimator extends React.Component<any, any> {
               />
             } />
             <FormControlLabel
-            label="Show detailed score"
+            label=""
             control={
               <Checkbox
               onChange={(e) => this.setProp('showDetailedScore', e.target.checked)}
@@ -437,10 +440,11 @@ export default class PoseEstimator extends React.Component<any, any> {
               inputProps={{ 'aria-label': 'showDetailedScore:' }}
               />
             } />
-          
+            </div>
+
             </div>
           <div>
-          Min Score: {this.state.minScoreToDraw}
+          최소 정확도: {this.state.minScoreToDraw}
             <Slider
             onChange={(e, val) => this.setProp('minScoreToDraw', val)}
             value={this.state.minScoreToDraw}
@@ -451,7 +455,7 @@ export default class PoseEstimator extends React.Component<any, any> {
           </div>
 
           <div>
-          Video capture interval: {this.state.videoCaptureTimeout}
+          비디오 캡처 간격: {this.state.videoCaptureTimeout}
             <Slider
             onChange={(e, val) => this.setProp('videoCaptureTimeout', val)}
             value={this.state.videoCaptureTimeout}
