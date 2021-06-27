@@ -1,5 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+<<<<<<< HEAD
 # training data
 /app/public/model
 /app/public/video/**/*.jpg
@@ -9,12 +10,23 @@
 /.pnp
 .pnp.js
 /**/Lib/*
+=======
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+>>>>>>> f0d2c6532ea2bcff6a3c846e44eb1f1c770a6ac0
 
 # testing
 /coverage
 
+<<<<<<< HEAD
 # build
 /app/build
+=======
+# production
+/build
+>>>>>>> f0d2c6532ea2bcff6a3c846e44eb1f1c770a6ac0
 
 # misc
 .DS_Store
