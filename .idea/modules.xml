@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/pose-estimator.iml" filepath="$PROJECT_DIR$/.idea/pose-estimator.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/myhomefit-react.iml" filepath="$PROJECT_DIR$/.idea/myhomefit-react.iml" />
+>>>>>>> dcefbcbf7c5406328b055b52d71b470e4e1a9491
     </modules>
   </component>
 </project>
