@@ -1,8 +1,11 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+<<<<<<< HEAD
 # Datasource local storage ignored files
 /../../../:\pose-estimator\.idea/dataSources/
 /dataSources.local.xml
+=======
+>>>>>>> 691d7fb68240a78b8e32a2d4f6d2ee38bcd4be67
 # Editor-based HTTP Client requests
 /httpRequests/
